@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <!-- Board heading container -->
+    <div class="kanban-heading">
+        <strong class="kanban-heading-text">Kanban Board</strong>
+    </div>
+
+    <div class="add-task">
+
+        <div class="form">
+            <form action="/" method="POST">
+                <input type="text" name="content" id="content">
+                <input type="submit" value="Add Task">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Kanban container -->
+    <div class="kanban-board">
+
+        <div class="kanban-block" id="todo">
+            <h3>To do</h3>
+            {% for task in todo_tasks %}
+            <div class="task" id="task1">
+                <div class="task_text">{{ task.content }}</div>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="/backward/{{task.id}}">
+                            <img src="../static/css/icons/left.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/delete/{{task.id}}">
+                            <img src="../static/css/icons/trash.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/update/{{task.id}}">
+                            <img src="../static/css/icons/settings.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/forward/{{task.id}}">
+                            <img src="../static/css/icons/right.png" alt="Example Icon">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="kanban-block" id="inprogress">
+            <h3>In Progress</h3>
+            {% for task in inprogress_tasks %}
+            <div class="task" id="task1">
+                <div class="task_text">{{ task.content }}</div>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="/backward/{{task.id}}">
+                            <img src="../static/css/icons/left.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/delete/{{task.id}}">
+                            <img src="../static/css/icons/trash.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/update/{{task.id}}">
+                            <img src="../static/css/icons/settings.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/forward/{{task.id}}">
+                            <img src="../static/css/icons/right.png" alt="Example Icon">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="kanban-block" id="done">
+            <h3>Done</h3>
+            {% for task in done_tasks %}
+            <div class="task" id="task1">
+                <div class="task_text">{{ task.content }}</div>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="/backward/{{task.id}}">
+                            <img src="../static/css/icons/left.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/delete/{{task.id}}">
+                            <img src="../static/css/icons/trash.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/update/{{task.id}}">
+                            <img src="../static/css/icons/settings.png" alt="Example Icon">
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="/forward/{{task.id}}">
+                            <img src="../static/css/icons/right.png" alt="Example Icon">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+{% endblock %}

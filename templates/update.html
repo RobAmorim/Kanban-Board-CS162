@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="kanban-heading">
+        <strong class="kanban-heading-text">Update Task</strong>
+    </div>
+    <div class="add-task">
+        <div class="form">
+            <form action="/update/{{task.id}}" method="POST">
+                <input type="text" name="content" id="content" value="{{task.content}}">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

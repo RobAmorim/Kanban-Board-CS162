@@ -1,0 +1,125 @@
+body {
+    background-color: #7da5be;
+}
+
+.task {
+    align-items: center;
+    background-color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0.1rem solid black;
+    /* width: 250px; */
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(123, 123, 123);
+    width: 100%;
+
+}
+
+.icons img {
+    width: 13px;
+    height: 13px;
+}
+
+.icon {
+    margin: 0 10%;
+    background-color: rgb(123, 123, 123);
+}
+
+.container {
+    width: 70%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.kanban-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.add-task {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+
+}
+
+#inputText {
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.7rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.add-button {
+    font-size: 1rem;
+    background-color: rgb(22, 22, 22);
+    color: rgb(255, 255, 255);
+    padding: 0.8rem 1.7rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.kanban-heading-text {
+    font-size: 1.8rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0.8rem 1.7rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    width: 200%;
+}
+
+.kanban-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.kanban-block {
+    padding: 0.6rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#todo {
+    background-color: #bbdffb;
+}
+
+#inprogress {
+    background-color: #64b7f5;
+}
+
+#done {
+    background-color: #1065c0;
+}
